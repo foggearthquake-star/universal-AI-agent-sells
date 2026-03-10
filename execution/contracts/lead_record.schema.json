@@ -1,0 +1,20 @@
+﻿{
+  "type": "object",
+  "required": ["client_id", "source", "telegram_user_id", "score", "qualification", "risk_flags", "handoff_status"],
+  "properties": {
+    "client_id": {"type": "string"},
+    "source": {"type": "string", "enum": ["telegram"]},
+    "telegram_user_id": {"type": "integer"},
+    "telegram_chat_id": {"type": "integer"},
+    "language": {"type": "string", "enum": ["ru", "en"]},
+    "intent": {"type": ["string", "null"]},
+    "timeline": {"type": ["string", "null"]},
+    "budget": {"type": ["string", "null"]},
+    "contact": {"type": ["string", "null"]},
+    "score": {"type": "integer", "minimum": 0, "maximum": 100},
+    "warmth": {"type": "string", "enum": ["cold", "warm", "hot"]},
+    "qualification": {"type": "string", "enum": ["qualified", "not_qualified"]},
+    "risk_flags": {"type": "array", "items": {"type": "string"}},
+    "handoff_status": {"type": "string", "enum": ["none", "pending_human", "claimed", "closed"]}
+  }
+}

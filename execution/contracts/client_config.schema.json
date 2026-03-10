@@ -1,0 +1,29 @@
+﻿{
+  "type": "object",
+  "required": ["client_id", "languages", "qualification", "risk_triggers", "handoff", "privacy"],
+  "properties": {
+    "client_id": {"type": "string"},
+    "languages": {"type": "array", "items": {"type": "string"}},
+    "qualification": {
+      "type": "object",
+      "required": ["threshold", "weights", "warmth_bands"],
+      "properties": {
+        "threshold": {"type": "integer", "minimum": 0, "maximum": 100},
+        "weights": {
+          "type": "object",
+          "required": ["intent", "timeline", "budget", "contact"],
+          "properties": {
+            "intent": {"type": "number"},
+            "timeline": {"type": "number"},
+            "budget": {"type": "number"},
+            "contact": {"type": "number"}
+          }
+        },
+        "warmth_bands": {"type": "object"}
+      }
+    },
+    "risk_triggers": {"type": "array", "items": {"type": "string"}},
+    "handoff": {"type": "object"},
+    "privacy": {"type": "object"}
+  }
+}

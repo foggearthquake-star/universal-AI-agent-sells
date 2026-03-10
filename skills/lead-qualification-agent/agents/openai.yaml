@@ -1,0 +1,3 @@
+﻿display_name: Lead Qualification Agent
+short_description: Collect lead data, score 0-100, and classify qualification.
+default_prompt: Qualify this lead from chat history and return structured score, warmth, qualification, and reasoning.

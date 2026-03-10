@@ -1,0 +1,22 @@
+﻿{
+  "type": "object",
+  "required": ["title", "lead_id", "score", "warmth", "qualification", "risk_flags", "summary"],
+  "properties": {
+    "title": {"type": "string"},
+    "lead_id": {"type": "string"},
+    "score": {"type": "integer"},
+    "warmth": {"type": "string"},
+    "qualification": {"type": "string"},
+    "risk_flags": {"type": "array", "items": {"type": "string"}},
+    "summary": {"type": "string"},
+    "fields": {
+      "type": "object",
+      "properties": {
+        "intent": {"type": ["string", "null"]},
+        "timeline": {"type": ["string", "null"]},
+        "budget": {"type": ["string", "null"]},
+        "contact": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

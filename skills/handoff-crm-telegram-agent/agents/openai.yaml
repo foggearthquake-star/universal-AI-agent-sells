@@ -1,0 +1,3 @@
+﻿display_name: Handoff CRM Telegram Agent
+short_description: Post lead cards to Telegram and sync lead data to amoCRM.
+default_prompt: Create handoff payloads and route this lead to Telegram and amoCRM with pending-human status.

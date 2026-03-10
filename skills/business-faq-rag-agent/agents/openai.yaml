@@ -1,0 +1,3 @@
+﻿display_name: Business FAQ RAG Agent
+short_description: Answer business FAQs from KB with anti-hallucination guardrails.
+default_prompt: Answer this customer question using only retrieved business knowledge and flag if escalation is needed.

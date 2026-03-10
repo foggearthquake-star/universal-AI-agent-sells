@@ -1,0 +1,36 @@
+{
+  "client_id": "default",
+  "languages": ["ru", "en"],
+  "qualification": {
+    "threshold": 65,
+    "weights": {
+      "intent": 0.35,
+      "timeline": 0.20,
+      "budget": 0.25,
+      "contact": 0.20
+    },
+    "warmth_bands": {
+      "cold": [0, 39],
+      "warm": [40, 69],
+      "hot": [70, 100]
+    }
+  },
+  "risk_triggers": [
+    "price_exact",
+    "contract_legal",
+    "complaint",
+    "urgent_deadline"
+  ],
+  "handoff": {
+    "telegram": {
+      "enabled": true
+    },
+    "amocrm": {
+      "enabled": false
+    }
+  },
+  "privacy": {
+    "mask_logs": true,
+    "retention_days": 180
+  }
+}

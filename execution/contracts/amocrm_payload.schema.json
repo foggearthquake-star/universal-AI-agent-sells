@@ -1,0 +1,19 @@
+﻿{
+  "type": "object",
+  "required": ["name", "custom_fields_values"],
+  "properties": {
+    "name": {"type": "string"},
+    "price": {"type": ["number", "null"]},
+    "custom_fields_values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["field_code", "values"],
+        "properties": {
+          "field_code": {"type": "string"},
+          "values": {"type": "array"}
+        }
+      }
+    }
+  }
+}
